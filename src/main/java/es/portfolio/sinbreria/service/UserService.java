@@ -1,10 +1,7 @@
 package es.portfolio.sinbreria.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -12,10 +9,10 @@ import es.portfolio.sinbreria.entity.Usuario;
 import es.portfolio.sinbreria.repository.UsuarioRepository;
 
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Optional;
 
 @Service
-public class UserService implements UserDetailsService {
+public class UserService {
 
     @Autowired
     private UsuarioRepository usuarioRepository;
@@ -23,12 +20,17 @@ public class UserService implements UserDetailsService {
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
 
-    public Usuario saveUsuario(Usuario usuario) {
+    public void saveUsuario(Usuario usuario) {
         String passwd = usuario.getPassword();
         String encodedPasswd = passwordEncoder.encode(passwd);
         usuario.setPassword(encodedPasswd);
-        return usuarioRepository.save(usuario);
+        usuarioRepository.save(usuario);
     }
+
+
+    public boolean authenticate(String username, String password) {
+        Usuario usuario = (Usuario) usuarioRepository.findByUsername(username).orElse(null);
+        return usuario != null && BCrypt.checkpw(password, usuario.getPassword());}
 
     public List<Usuario> findAllUsuarios() {
         return usuarioRepository.findAll();
@@ -42,20 +44,8 @@ public class UserService implements UserDetailsService {
         usuarioRepository.deleteById(id);
     }
 
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Usuario usuario = (Usuario) usuarioRepository.findByUsername(username)
-                .orElseThrow(() -> new UsernameNotFoundException("Usuario no encontrado"));
-
-        List<SimpleGrantedAuthority> authorities = usuario.getRoles().stream()
-                .map(role -> new SimpleGrantedAuthority(role.getAuthority()))
-                .collect(Collectors.toList());
-
-        return new org.springframework.security.core.userdetails.User(
-                usuario.getUsername(),
-                usuario.getPassword(),
-                authorities
-        );
+    public Optional<Object> findByUsername(String username) {
+        return usuarioRepository.findByUsername(username);
     }
 }
 

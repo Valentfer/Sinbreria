@@ -5,14 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa690baa-404b-498b-885f-1cd2de9efd94" name="Changes" comment="Inicio">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/libros/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/libros/libro.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/usuarios/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/usuarios/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/usuarios/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/usuarios/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/usuarios/show.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/usuarios/usuario.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/SinbreriaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/SinbreriaApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/controller/UsuarioController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/entity/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/service/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/service/LibroService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/service/LibroService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/service/UsuarioService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/libros/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/libros/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/libros/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/libros/show.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,14 +41,26 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Valentfer&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Valentfer/Sinbreria.git&quot;,
+    &quot;accountId&quot;: &quot;c1d377cc-d070-4b5d-95dc-e90a4304e74c&quot;
+  }
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -62,7 +92,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "H:/Mi unidad/Spring/Sinbreria",
+    "last_opened_file_path": "H:/Mi unidad/Spring/Sinbreria/src/main/resources/templates/libros",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -72,6 +102,14 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\Mi unidad\Spring\Sinbreria\src\main\resources\templates\libros" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\Mi unidad\Spring\Sinbreria\src\main\resources\templates\usuarios" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="SinbreriaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="Sinbreria" />
@@ -102,7 +140,10 @@
       <workItem from="1725180621773" duration="1692000" />
       <workItem from="1725257770813" duration="1863000" />
       <workItem from="1725259647138" duration="574000" />
-      <workItem from="1725260238032" duration="1210000" />
+      <workItem from="1725260238032" duration="6756000" />
+      <workItem from="1725344518814" duration="4416000" />
+      <workItem from="1725348952179" duration="10802000" />
+      <workItem from="1725432792032" duration="9298000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio">
       <option name="closed" value="true" />

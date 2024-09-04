@@ -41,17 +41,13 @@ public class Usuario implements UserDetails {
 
     @Override
     public String getPassword() {
-        return "";
+        return password;
     }
 
     @Override
     public String getUsername() {
-        return "";
+        return username;
     }
-
-    // Implementación de métodos de UserDetails
-
-    // Constructor, getters y setters
 
 
     public Usuario() {
@@ -87,5 +83,6 @@ public class Usuario implements UserDetails {
     public void setRoles(Set<Rol> roles) {
         this.roles = roles;
     }
+
 }
 

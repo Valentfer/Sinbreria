@@ -38,11 +38,13 @@
     <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
 
     <!-- URL de redirección -->
-    <input type="hidden" name="redirectUrl" value="" />
+    <input type="hidden" name="redirectUrl" value="/index" />
 </form>
 
 <!-- Enlace a registro -->
-<p>¿No tiene cuenta? <a href="/register">Registrese aquí</a></p>
+<p>¿No tiene cuenta? <a th:href="@{/register}">Registrese aquí</a></p>
+
+
 </body>
 </html>
 
