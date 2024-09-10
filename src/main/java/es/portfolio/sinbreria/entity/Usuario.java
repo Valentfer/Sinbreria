@@ -8,7 +8,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.List;
-import java.util.Set;
+
 
 @Entity
 @Table(name = "usuarios")
@@ -32,33 +32,19 @@ public class Usuario implements UserDetails {
             joinColumns = @JoinColumn(name = "usuario_id"),
             inverseJoinColumns = @JoinColumn(name = "rol_id")
     )
-    private Set<Rol> roles;
-
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of();
-    }
-
-    @Override
-    public String getPassword() {
-        return password;
-    }
-
-    @Override
-    public String getUsername() {
-        return username;
-    }
+    private List<Rol> roles;
 
 
     public Usuario() {
     }
 
-    public Usuario(Long id, String username, String password, Set<Rol> roles) {
+    public Usuario(Long id, String username, String password, List<Rol> roles) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.roles = roles;
     }
+
 
     public Long getId() {
         return id;
@@ -68,20 +54,54 @@ public class Usuario implements UserDetails {
         this.id = id;
     }
 
+    public String getUsername() {
+        return username;
+    }
+
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    @Override
+    public Collection<GrantedAuthority> getAuthorities() {
+        return List.of();
+    }
+
+    public String getPassword() {
+        return password;
     }
 
     public void setPassword(String password) {
         this.password = password;
     }
+    
 
-    public Set<Rol> getRoles() {
-        return roles;
+    public void setRoles(List<Rol> roles) {
+        this.roles = roles;
     }
 
-    public void setRoles(Set<Rol> roles) {
-        this.roles = roles;
+    public List<Rol> getRoles() {
+        return roles;
+    }
+    
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
     }
 
 }

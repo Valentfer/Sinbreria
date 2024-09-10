@@ -19,23 +19,11 @@ public class Rol implements GrantedAuthority {
     @ManyToMany(mappedBy = "roles")
     private Set<Usuario> usuarios;
 
-    @Override
-    public String getAuthority() {
-        return "";
-    }
+    public Rol() {}
 
-    // Implementación de método de GrantedAuthority
-
-    // Constructor, getters y setters
-
-
-    public Rol() {
-    }
-
-    public Rol(Long id, String authority, Set<Usuario> usuarios) {
+    public Rol(Long id, String authority) {
         this.id = id;
         this.authority = authority;
-        this.usuarios = usuarios;
     }
 
     public Long getId() {
@@ -44,6 +32,11 @@ public class Rol implements GrantedAuthority {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    @Override
+    public String getAuthority() {
+        return authority;
     }
 
     public void setAuthority(String authority) {
@@ -57,5 +50,6 @@ public class Rol implements GrantedAuthority {
     public void setUsuarios(Set<Usuario> usuarios) {
         this.usuarios = usuarios;
     }
+
 }
 

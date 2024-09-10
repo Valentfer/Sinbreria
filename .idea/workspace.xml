@@ -4,33 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa690baa-404b-498b-885f-1cd2de9efd94" name="Changes" comment="Inicio">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/libros/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/libros/libro.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/usuarios/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/usuarios/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/usuarios/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/usuarios/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/usuarios/show.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/usuarios/usuario.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="fa690baa-404b-498b-885f-1cd2de9efd94" name="Changes" comment="proyecto reestructado al comprobar algunas redirecciones.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/SinbreriaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/SinbreriaApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/controller/AuthController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/controller/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/entity/Rol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/entity/Rol.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/entity/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/service/LibroService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/service/LibroService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/repository/UsuarioRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/service/UsuarioService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/libros/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/libros/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/libros/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/libros/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/usuarios/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/usuarios/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +30,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -92,21 +82,30 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "H:/Mi unidad/Spring/Sinbreria/src/main/resources/templates/libros",
+    "last_opened_file_path": "H:/Mi unidad/Spring/Sinbreria/src/main/resources/templates",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="es.portfolio.sinbreria.repository" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\Mi unidad\Spring\Sinbreria\src\main\resources\templates" />
       <recent name="H:\Mi unidad\Spring\Sinbreria\src\main\resources\templates\libros" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\Mi unidad\Spring\Sinbreria\src\main\resources\templates" />
+      <recent name="H:\Mi unidad\Spring\Sinbreria\src\main\resources\static" />
       <recent name="H:\Mi unidad\Spring\Sinbreria\src\main\resources\templates\usuarios" />
     </key>
   </component>
@@ -143,7 +142,18 @@
       <workItem from="1725260238032" duration="6756000" />
       <workItem from="1725344518814" duration="4416000" />
       <workItem from="1725348952179" duration="10802000" />
-      <workItem from="1725432792032" duration="9298000" />
+      <workItem from="1725432792032" duration="9644000" />
+      <workItem from="1725443027397" duration="1515000" />
+      <workItem from="1725445147146" duration="817000" />
+      <workItem from="1725446431092" duration="790000" />
+      <workItem from="1725522592999" duration="1995000" />
+      <workItem from="1725531586132" duration="98000" />
+      <workItem from="1725602076808" duration="7666000" />
+      <workItem from="1725690934067" duration="8602000" />
+      <workItem from="1725715395678" duration="9390000" />
+      <workItem from="1725725940250" duration="4429000" />
+      <workItem from="1725864044540" duration="10598000" />
+      <workItem from="1725960262066" duration="7704000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio">
       <option name="closed" value="true" />
@@ -161,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725181137159</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="proyecto reestructado al comprobar algunas redirecciones.">
+      <option name="closed" value="true" />
+      <created>1725442811538</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1725442811538</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +190,7 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="Inicio" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inicio" />
+    <MESSAGE value="proyecto reestructado al comprobar algunas redirecciones." />
+    <option name="LAST_COMMIT_MESSAGE" value="proyecto reestructado al comprobar algunas redirecciones." />
   </component>
 </project>

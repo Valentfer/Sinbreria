@@ -20,12 +20,12 @@
 <div class="container">
     <h1>Registro de usuario</h1>
 
-    <form th:object="${usuario}" th:action="@{/registro}" method="post">
+    <form th:object="${usuario}" th:action="@{/register}" method="post">
         <div>
             <label for="username">Nombre:</label>
             <input type="text" id="username" th:field="*{username}" required />
             <p class="error-message" th:if="${#fields.hasErrors('username')}" th:errors="*{username}">
-                <span th:text="${#fields.error('username')}"></span>
+                  <span th:text="${#fields.errors('username')}"></span>
             </p>
         </div>
 
@@ -33,21 +33,22 @@
             <label for="password">Contraseña:</label>
             <input type="password" id="password" th:field="*{password}" required />
             <p class="error-message" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">
-                <span th:text="${#fields.error('password')}"></span>
-            </p>
-        </div>
+                  <span th:text="${#fields.errors('password')}"></span>
+              </p>
+          </div>
 
-        <button type="submit">Registrar</button>
+          <button type="submit">Registrar</button>
 
-        <!-- CSRF Token -->
+          <!-- CSRF Token -->
         <input type="hidden" name="_csrf" value="${_csrf.token}"/>
     </form>
 
-    <p th:if="${successMessage}" class="success-message" th:text="${successMessage}"></p>
 
-    <p th:if="${errorMessage}" class="error-message" th:text="${errorMessage}"></p>
+       <p th:if="${successMessage}" class="success-message" th:text="${successMessage}"></p>
 
-    <!-- Enlace a login -->
+       <p th:if="${errorMessage}" class="error-message" th:text="${errorMessage}"></p>
+
+       <!-- Enlace a login -->
     <p>¿Ya tienes cuenta? <a th:href="@{/login}">Inicia sesión aquí</a></p>
 </div>
 </body>
