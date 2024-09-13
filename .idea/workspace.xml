@@ -4,23 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa690baa-404b-498b-885f-1cd2de9efd94" name="Changes" comment="proyecto reestructado al comprobar algunas redirecciones.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+    <list default="true" id="fa690baa-404b-498b-885f-1cd2de9efd94" name="Changes" comment="problemas con el Login de Spring.">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/SinbreriaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/SinbreriaApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/controller/AuthController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/controller/UsuarioController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/entity/Rol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/entity/Rol.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/entity/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/repository/UsuarioRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/portfolio/sinbreria/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/usuarios/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/usuarios/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,31 +66,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.SinbreriaApplication.executor": "Run",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "H:/Mi unidad/Spring/Sinbreria/src/main/resources/templates",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.SinbreriaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;H:/Mi unidad/Spring/Sinbreria/src/main/resources/templates&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="es.portfolio.sinbreria.repository" />
@@ -153,7 +149,10 @@
       <workItem from="1725715395678" duration="9390000" />
       <workItem from="1725725940250" duration="4429000" />
       <workItem from="1725864044540" duration="10598000" />
-      <workItem from="1725960262066" duration="7704000" />
+      <workItem from="1725960262066" duration="8162000" />
+      <workItem from="1726048689008" duration="6320000" />
+      <workItem from="1726129431388" duration="10243000" />
+      <workItem from="1726213462452" duration="5800000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio">
       <option name="closed" value="true" />
@@ -179,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725442811538</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="problemas con el Login de Spring.">
+      <option name="closed" value="true" />
+      <created>1725968966899</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1725968966899</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +198,7 @@
     </ignored-roots>
     <MESSAGE value="Inicio" />
     <MESSAGE value="proyecto reestructado al comprobar algunas redirecciones." />
-    <option name="LAST_COMMIT_MESSAGE" value="proyecto reestructado al comprobar algunas redirecciones." />
+    <MESSAGE value="problemas con el Login de Spring." />
+    <option name="LAST_COMMIT_MESSAGE" value="problemas con el Login de Spring." />
   </component>
 </project>

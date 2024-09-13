@@ -1,8 +1,6 @@
 package es.portfolio.sinbreria.controller;
 
 import es.portfolio.sinbreria.entity.Usuario;
-import es.portfolio.sinbreria.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -11,11 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/usuarios")
 public class UsuarioController {
 
-    @Autowired
-    private UserService userService;
-
-
-
+/*
     @GetMapping("/new")
     public String createForm(Model model) {
         Usuario usuario = new Usuario();
