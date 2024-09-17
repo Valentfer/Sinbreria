@@ -33,6 +33,10 @@ public class AuthController {
         this.userRepository = userRepository;
     }
 
+    @GetMapping("/index")
+    public String index() {
+        return "index";
+    }
 
     @GetMapping("/login")
     public String login() {
@@ -45,21 +49,12 @@ public class AuthController {
             Authentication authentication = new UsernamePasswordAuthenticationToken(usuario.getUsername(), usuario.getPassword());
             SecurityContextHolder.getContext().setAuthentication(authentication);
 
-            return "redirect:/index";
+            return "/usuarios/usuario";
         } catch (Exception e) {
             logger.error("Error al autenticar usuario", e);
             model.addAttribute("error", "Credenciales incorrectas");
             return "login";
         }
-    }
-
-
-
-    @GetMapping("/logout")
-    public String logout(Model model) {
-        //SecurityContextHolder.clearContext();
-        model.addAttribute("message", "Has salido de la sesión correctamente");
-        return "login";
     }
 
 
@@ -75,6 +70,7 @@ public class AuthController {
     @PostMapping("/register")
     public String register(@RequestParam String username,
                            @RequestParam String password,
+                           @RequestParam String confirmPassword,
                            RedirectAttributes redirectAttrs) {
 
         try {
@@ -82,24 +78,24 @@ public class AuthController {
                 throw new Exception("El nombre de usuario ya existe");
             }
 
-            Usuario newUser = new Usuario();
-            newUser.setUsername(username);
-            newUser.setPassword(password);
-            userService.saveUsuario(newUser);
+            if (!password.equals(confirmPassword)) {
+                redirectAttrs.addFlashAttribute("error", "La contraseña no coincide");
+                return "redirect:/register";
+            }else {
 
-            redirectAttrs.addFlashAttribute("success", "Usuario registrado correctamente");
-            return "redirect:/login";
+                Usuario newUser = new Usuario();
+                newUser.setUsername(username);
+                newUser.setPassword(password);
+                userService.saveUsuario(newUser);
 
+                redirectAttrs.addFlashAttribute("success", "Usuario registrado correctamente");
+                return "redirect:/login";
+            }
         } catch (Exception e) {
             logger.error("Error al registrar usuario: ", e);
             redirectAttrs.addFlashAttribute("error", "El nombre de usuario ya existe");
             return "redirect:/register";
         }
-    }
-
-    @GetMapping("/index")
-    public String index() {
-        return "index";
     }
 
 }

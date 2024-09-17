@@ -1,6 +1,6 @@
 package es.portfolio.sinbreria.controller;
 
-import es.portfolio.sinbreria.entity.Usuario;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -9,15 +9,19 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/usuarios")
 public class UsuarioController {
 
-/*
-    @GetMapping("/new")
-    public String createForm(Model model) {
-        Usuario usuario = new Usuario();
-        usuario.setUsername("");
-        usuario.setPassword("");
-        model.addAttribute("usuario", usuario);
-        return "/usuarios/create";
+
+    @GetMapping("/index")
+    public String logout(Model model) {
+        SecurityContextHolder.clearContext();
+        model.addAttribute("message", "Has salido de la sesión correctamente");
+        return "index";
     }
+
+    @GetMapping("/usuario")
+    public String indiceUser() {
+        return "/usuarios/usuario";
+    }
+
 /*
 
     @PatchMapping("/{id}")
@@ -46,7 +50,7 @@ public class UsuarioController {
             model.addAttribute("errorMessage", "Ocurrió un error al eliminar el usuario: " + e.getMessage());
             return "/usuarios/error";
         }
-    }*/
+    }
 //    @GetMapping
 //    public String index(Model model) {
 //        model.addAttribute("usuarios", userService.findAllUsuarios());

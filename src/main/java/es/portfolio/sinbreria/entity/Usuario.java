@@ -33,6 +33,8 @@ public class Usuario implements UserDetails {
     @JsonIgnore
     private String password;
 
+    private String confirmPassword;
+
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "usuario_roles",

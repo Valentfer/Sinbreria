@@ -1,7 +1,11 @@
 package es.portfolio.sinbreria.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+@Setter
+@Getter
 @Entity
 @Table(name = "libros")
 public class Libro {
@@ -23,8 +27,6 @@ public class Libro {
     @JoinColumn(name = "categoria_id", nullable = false)
     private Categoria categoria;
 
-    // Constructor, getters y setters
-
 
     public Libro() {
     }
@@ -36,44 +38,5 @@ public class Libro {
         this.titulo = titulo;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
-    }
-
-    public String getIsbn() {
-        return isbn;
-    }
-
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
-    }
-
-    public Categoria getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
 }
 

@@ -35,8 +35,12 @@
             <p class="error-message" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">
                   <span th:text="${#fields.errors('password')}"></span>
               </p>
-          </div>
+        </div>
 
+        <div>
+            <label for="confirmPassword">Confirmar Contraseña:</label>
+            <input type="password" id="confirmPassword" th:field="*{confirmPassword}" required />
+        </div>
 
           <button type="submit">Registrar</button>
 
@@ -49,7 +53,8 @@
 
        <p th:if="${errorMessage}" class="error-message" th:text="${errorMessage}"></p>
 
-       <!-- Enlace a login -->
+
+    <!-- Enlace a login -->
     <p>¿Ya tienes cuenta? <a th:href="@{/login}">Inicia sesión aquí</a></p>
 </div>
 </body>
