@@ -1,13 +1,23 @@
 package es.portfolio.sinbreria.controller;
 
+import es.portfolio.sinbreria.entity.Libro;
+import es.portfolio.sinbreria.entity.Usuario;
+import es.portfolio.sinbreria.service.LibroService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/usuarios")
 public class UsuarioController {
+
+    @Autowired
+    private LibroService libroService;
 
 
     @GetMapping("/index")
@@ -18,7 +28,19 @@ public class UsuarioController {
     }
 
     @GetMapping("/usuario")
-    public String indiceUser() {
+    public String indiceUser(Model model) {
+
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+        Usuario usuario = (Usuario) authentication.getPrincipal();
+
+        model.addAttribute("username", usuario.getUsername());
+        model.addAttribute("email", usuario.getId());
+        model.addAttribute("libros", usuario.getLibros());
+
+        List<Libro> librosUsuario = libroService.findAll();
+        model.addAttribute("libros", librosUsuario);
+
         return "/usuarios/usuario";
     }
 

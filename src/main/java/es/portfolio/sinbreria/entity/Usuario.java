@@ -44,6 +44,16 @@ public class Usuario implements UserDetails {
     private List<Rol> roles = new ArrayList<>();
 
 
+    @Getter
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "usuario_libros",
+            joinColumns = @JoinColumn(name = "usuario_id"),
+            inverseJoinColumns = @JoinColumn(name = "libro_id")
+    )
+    private List<Libro> libros = new ArrayList<>();
+
+
     public Usuario() {
     }
 
@@ -58,6 +68,11 @@ public class Usuario implements UserDetails {
         this.username = username;
         this.password = password;
         this.roles = roles;
+    }
+
+    public void addLibro(Libro libro) {
+        this.libros.add(libro);
+        libro.getUsuarios().add(this); // Si Libro tiene una lista de usuarios
     }
 
 
